@@ -1,0 +1,39 @@
+section {
+    padding: 100px 0;
+}
+
+
+ /* section======================= */
+
+.intro{
+    position: relative;
+}
+.intro h1{
+    width: 200px;
+    margin: auto;
+ }
+
+.intro>p{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    color: #FE7C72;
+    text-align: center;
+    /* font-weight: bold; */
+}
+
+.register>a{
+   position: absolute;
+   left: 50%;
+   bottom: 10%;
+   transform: translate(-50%, -50%);
+   color: #2A3258;
+}
+.register>a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #2A3258;
+}

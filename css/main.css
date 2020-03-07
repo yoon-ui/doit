@@ -1,0 +1,525 @@
+body{
+    background: #F7F6FB;
+}
+/* header==================================================================== */
+header .sp-common-option{
+    position: absolute;
+    right: 13px;
+}
+/* --------------------------------header중 menu팝업*/
+.menu{
+    left: 50%;
+    right: initial;
+    max-width: 300px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+.menu .container{
+    max-width: 300px;
+    height: 468px;
+    overflow: scroll;
+    /* padding: 40px 30px;
+    box-sizing: border-box; */
+}
+.menu .sp-common-menu-popup-add{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.menu .dday-box{
+    text-align: center;
+    height: 83px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.menu .dday-box .dday-id{
+    display: none;
+}
+.menu .dday-box .dday-title{
+    display: block;
+    margin-bottom: 10px;
+}
+.menu .dday-box .dday-progressbar{
+    width: 240px;
+    margin: auto;
+    background: #F0EFF2;
+    border-radius: 10px;
+}
+.menu .dday-box .dday-progressbar .back-color {
+    display: block;
+    width: 0%;
+    height: 10px;
+    border-radius: 20px;
+}
+.menu .dday-box .dday-progressbar .back-color.red{
+    background: #F06648;
+}
+.menu .dday-box .dday-progressbar .back-color.green{
+    background: #A6D176;
+}
+.menu .dday-box .dday-progressbar .back-color.orange{
+    background: #F7991C;
+}
+.menu .dday-box .dday-progressbar .back-color.blue{
+    background: #75BCDF;
+}
+.menu .dday-box .dday-progressbar .back-color.purple{
+    background: #B19CCA;
+}
+
+.menu .dday-box ul{
+    display: none;
+    width: 100px;
+    margin: 10px auto;
+    /* display: flex; */
+    justify-content: space-between;
+}
+.menu .delete-confirm{
+    text-align: center;
+}
+.menu .delete-confirm span{
+    display: block;
+}
+.menu .delete-confirm .delete-btn-group{
+    display: flex;
+    justify-content: space-between;
+}
+.menu .delete-confirm .delete-btn-group>button{
+    width: 60px;
+    height: 20px;
+    background: #FE7C72;
+
+}
+.menu .app-box{
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    width: 100%;
+}
+.menu .app-box>*{
+    float: left;
+    text-align: left;
+}
+.menu .app-box p{
+    margin: 17px 0 0 10px;
+}
+.menu .app-box span{
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+}
+/* -----------------------------------삭제여부팝업 */
+.menu .delete-confirm{
+    width: 210px;
+    height: 100px;
+    margin: auto;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+/* -----------------------------------------header중 option팝업 */
+.option{
+    top: 14px;
+    right: 14px;
+    left: initial;
+    width: 130px;
+    height: 180px;;
+    transform: initial;
+}
+.option ul{
+    height: 100%;
+}
+.option ul li{
+    float: left;
+    padding: 0 24px;
+    line-height: 40px;
+
+}
+.option ul li:nth-of-type(1){
+    padding-top: 8px;
+}
+.option ul li a{
+    font-size: 12px;
+    font-weight: 400;
+}
+.option ul li a>span{
+    vertical-align: text-bottom;
+    margin-right: 5px;
+}
+
+/* section========================================================== */
+section{
+    height: auto;
+    padding-top: 50px
+}
+section .quick-btn-group{
+    position: fixed;
+    bottom: 53px;
+    right: 13px;
+    z-index: 1;
+}
+section .quick-btn-group li:nth-of-type(1){
+    margin-bottom: 13px;
+}
+/* --------------------------디데이차트부분 */
+.main .dday-progressbar{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2A3258;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.main .dday-progressbar span {
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main .dday-progressbar .d-day{
+    top: 30%;
+    font-weight: 700;
+}
+.main .dday-progressbar .d-day-title{
+    bottom: 30%;
+}
+
+/* ---------------------------todolist-popup */
+.main .todolist-popup{
+    z-index: 20;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    padding-bottom: 40px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    line-height: 50px;
+}
+.main .todolist-popup>ul{
+    display: flex;
+    justify-content: space-between;
+    max-width: 160px;
+    padding-left:40px;
+}
+.main .todolist-popup>ul>li{
+    display: inline-block;
+}
+
+.main .todolist-popup>ul>li>button{
+    vertical-align: text-top;
+}
+.main .todolist-popup>ul .active{
+    border-top: 3px solid #2A3258;
+}
+.main .todolist-popup>ul .date button{width: 23px; height: 23px; background-position: -160px -30px;}
+.main .todolist-popup>ul .dday button{width: 23px; height: 23px; background-position: -183px -30px;}
+.main .todolist-popup>ul .repeat button{width: 23px; height: 23px; background-position: -206px -30px;}
+.main .todolist-popup>ul .star button{width: 23px; height: 23px; background-position: -229px -30px;}
+.main .todolist-popup>ul .active.date button,
+.main .todolist-popup>ul .done.date button{background-position: -252px -30px;}
+.main .todolist-popup>ul .active.dday button,
+.main .todolist-popup>ul .done.dday button{background-position: -275px -30px;}
+.main .todolist-popup>ul .active.repeat button,
+.main .todolist-popup>ul .done.repeat button{background-position: -298px -30px;}
+.main .todolist-popup>ul .active.star button,
+.main .todolist-popup>ul .done.star button{background-position: -321px -30px;}
+
+
+/* ---------------------------todo제목입력창 */
+.main .todolist-popup .input-box{
+    position: relative;
+    padding: 0 13px;
+}
+.main .todolist-popup .input-box input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #EEEEEE;
+    border-radius: 20px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.main .todolist-popup .input-box button{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ---------------------------팝업 각 목록 클릭시*/
+.main .todolist-popup .todolist-popup-select-popup{
+    position: absolute;
+    margin-bottom: 140px;
+    width: 100%;
+    bottom: 0;
+} 
+
+.main .todolist-popup .todolist-popup-select-popup>ul>li{
+    display: none;
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto
+}
+
+
+/* --------------------------------------디데이선택 */
+.main .todolist-popup .todolist-popup-select-popup .todo-dday{
+  
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-dday label{
+    display: flex;
+    justify-content: end;
+    height: 45px;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-dday label [type=radio]:checked~span{
+    color:red;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-dday label .color{
+    display: inline-block;
+    width: 5px;
+    height: 45px;
+    margin-right: 10px;
+    background: #c4c4c4;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-dday label .color.red{
+    background: #F06648;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-dday label .color.green{
+    background: #A6D176;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-dday label .color.orange{
+    background: #F7991C;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-dday label .color.blue{
+    background: #75BCDF;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-dday label .color.purple{
+    background: #B19CCA;
+}
+/* --------------------------------------반복여부선택 */
+.main .todolist-popup .todolist-popup-select-popup .todo-repeat{
+ 
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-repeat .radio-box,
+.main .todolist-popup .todolist-popup-select-popup .todo-repeat .check-box{
+    max-width: 290px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 100;
+    color: #bbb;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-repeat .radio-box li input[type="radio"] + span,
+.main .todolist-popup .todolist-popup-select-popup .todo-repeat .check-box li input[type="checkbox"] + label{
+    display:inline-block;
+    vertical-align: middle;
+    background:#fff;
+    height:10px;
+    width:10px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    margin-right: 6px;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-repeat .radio-box li input[type="radio"]:checked + span{
+    background: #B6C7E1;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-repeat .check-box li input[type="checkbox"] + label{
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin-right: 0;
+    text-align: center;
+    line-height: 30px;
+    box-sizing: border-box;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-repeat .check-box li input[type="checkbox"]:checked + label{
+    background: #2A3258;
+    color: #fff;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/* -------------------------------------- 중요도선택*/
+.main .todolist-popup .todolist-popup-select-popup .todo-star{
+   
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-star ul{
+    max-width: 285px;
+    margin: auto;
+    display: flex;
+    font-size: 14px;
+    font-weight: 100;
+    justify-content: space-between;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-star li input[type="radio"] + span{
+    display:inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-star li:nth-of-type(1) label input:checked + .sp{
+    background-position: -64px -95px;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-star li:nth-of-type(2) label input:checked + .sp{
+    background-position: -364px -70px;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-star li:nth-of-type(3) label input:checked + .sp{
+    background-position: -382px -70px;
+}
+.main .todolist-popup .todolist-popup-select-popup .todo-star li:nth-of-type(4) label input:checked + .sp{
+    background-position: -418px -70px;
+}
+
+
+
+/* todolist====================================================================== */
+/* .main .todolist{
+    display: block;
+    padding-top: 8px;
+    font-size: 14px;
+} */
+.main .todolist-container{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    height: 410px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 0px 0px;
+    transition: height 0.5s;
+}
+
+    
+/*  팝업 (메모장)*/
+.memo{
+    display: none;
+    top: 50%;
+    left: 50%;
+    right: initial;
+    max-width: 300px;
+    width: 100%;
+    height: calc( 100% - 70% );
+    padding: 20px 0;
+    transform: translate(-50%, -50%);
+}
+.memo .sp-main-memo-memo{
+    float: left;
+    margin-left: 20px;
+}
+.memo .sp-main-memo-write{
+    float: right;
+    margin-right: 20px;
+}
+.popup.memo .memo-show{ 
+    width: 100%;;
+    height: 100%;
+    margin: auto;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    color: #000;
+    overflow-y: hidden;
+}
+
+.fullmemo{
+    display: none;
+    left: initial;
+    right: initial;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background: #F7F6FB;
+    box-sizing: border-box;
+}
+.fullmemo-header{
+    position: fixed;
+    width: 100%;
+    height: 50px; 
+    padding: 13px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #F7F6FB;
+}
+
+.fullmemo-header .sp-common-menu{
+    position: absolute;
+    left: 13px;
+}
+.fullmemo-header>.container>button:first-child{
+    position: absolute;
+    left: 13px;
+}
+.fullmemo-header>.container>button:last-child{
+    position: absolute;
+    right: 13px;
+}
+
+.fullmemo>textarea {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.memo>textarea::placeholder,
+.fullmemo>textarea::placeholder{
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+#calendar {
+    display: none;
+}
+/* percent=========================================================== */
+#svg {
+    position: absolute;
+    left: -9px;
+    /* transform: translateX(-50%); */
+    top: -10px;
+    transform: rotate(-90deg);
+}
+
+#svg circle {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+    stroke: #2a3258;
+    stroke-width: 1em;
+}
+#svg #bar {
+    stroke: #B6C7E1;
+}
+#cont {
+    display: block;
+    height: 200px;
+    width: 200px;
+    /* margin: 2em auto; */
+    border-radius: 100%;
+    position: relative;
+}
+
+/* ==== */
+.todolist-container.down{
+    height: 0;
+}
+
+.todolist-container.up{
+    height: 100%;
+}
+
+.sp-main-todo-edit{
+    display: none;
+}

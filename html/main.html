@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>main</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>    
+    <script src="../js/jquery.touchSwipe.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2>Today</h2>
+            <button class="sp sp-common-option"><span class="blind">옵션</span></button>
+        </div>
+    </header>
+    <div class="popup menu">
+        <button class="sp sp-common-menu-popup-add" onclick="location.href='todo.html'" ><span class="blind">추가하기</span> </button>
+        <div class="container">
+            <div class="dday-box">
+                <span class="dday-title">디데이를 입력해주세요</span>
+                <div class="dday-progressbar">
+                    <span class="back-color"></span>
+                </div>
+                <ul>
+                    <li><button class="sp sp-common-menu-popup-delete"></button></li>
+                    <li><button id="btn-dday-edit" class="sp sp-common-menu-popup-re"></button></li>
+                </ul>
+                <!-- day 팝업에 뿌리기 -->
+                <!-- <div class="dday-box">
+                    <span class="dday-id">${obj.ddayId}</span>
+                    <span class="dday-title">${obj.ddayTitle}</span>
+                    <div class="dday-progressbar">
+                    <span class="back-color ${obj.ddayColor}"></span>
+                </div>
+                <ul>
+                    <li><button class="btn-dday-delete sp sp-common-menu-popup-delete"></button></li>
+                    <li><button class="btn-dday-edit sp sp-common-menu-popup-re"></button></li>
+                </ul>
+                 </div> -->
+            </div>
+            <div class="popup delete-confirm">
+                <span>삭제하시겠습니까?</span>
+                <div class="delete-btn-group">
+                    <button class="cancle">취소</button>
+                    <button class="ok">확인</button>
+                </div>
+            </div>
+        </div>
+        <div class="app-box">
+            <img src="../img/doit_small.svg" alt="">
+            <p>
+                <span>ver 1.0</span>
+                <span>Doit@gmail.com</span>
+            </p>
+        </div>
+    </div>
+    <div class="popup option">
+        <ul>
+            <li><a href="#"><span class="sp sp-common-option-clock"></span>최근등록순</a></li>
+            <li><a href="#"><span class="sp sp-common-option-dday"></span>디데이순</a></li>
+            <li><a href="#"><span class="sp sp-common-option-check"></span>중요도순</a></li>
+            <li><a href="#"><span class="sp sp-common-option-star"></span>다중편집</a></li>
+        </ul>
+    </div>
+
+    <div class="popup memo">
+        <span class="sp sp-main-memo-memo"></span>
+        <span class="sp sp-main-memo-write"></span>
+        <p class="memo-show">메모를 작성해보세요</p> 
+    </div>
+    <div class="popup fullmemo">
+        <div class="fullmemo-header">
+            <div class="container">
+                <button type="button" onclick="location.href='./main.html'">취소</span></button> 
+                <h2>Today</h2>
+                <button>저장</button>
+            </div>
+        </div>
+        <textarea style="resize: none;" placeholder="메모를 작성해보세요."></textarea>
+    </div>
+    
+    <!-- section========================================================================================= -->
+    <section>
+        <ul class="quick-btn-group">
+            <li>
+                <button class="sp sp-main-todo-c"><span class="blind">추가하기</span></button>
+            </li>
+            <li>
+                <button class="sp sp-main-memo"><span class="blind">메모작성</span></button>
+            </li>
+        </ul>
+        <article class="main">
+            <div class="dday-progressbar">
+                <span class="d-day">D-day</span>
+                <span class="d-day-title">를 등록하세요.</span>
+                <div id="cont" data-pct="100">
+                    <svg id="svg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+                        <circle id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+                    </svg>
+                </div>
+            </div>
+            <div class="todolist-popup">
+                <ul>
+                    <!-- <li class="date"><button class="sp"><span class="blind"></span></button><span></span></li> -->
+                    <li class="dday"><button class="sp"><span class="blind"></span></button><span></span></li>
+                    <!-- <li class="repeat"><button class="sp"><span class="blind"></span></button><span></span></li> -->
+                    <li class="star"><button class="sp"><span class="blind"></span></button><span></span></li>
+                </ul>
+                <div class="input-box">
+                    <input type="text" placeholder="오늘 할일을 적어보세요"  id="todoTitle">
+                    <button class="sp sp-main-todo-add"><span class="blind">추가하기</span></button>
+                    <button class="sp sp-main-todo-edit"><span class="blind">수정하기</span></button>
+                </div>
+                <div class="todolist-popup-select-popup">
+                    <ul>
+                        <!-- <li class="todo-date">
+                            <div></div>
+                        </li> -->
+                        <li class="todo-dday">
+                            <!-- todo-dday 뿌리기-->
+                            <!-- <label>
+                                <input type="radio" name="dday-item" value="${obj.ddayId}">
+                                <span class="color ${obj.ddayColor}"></span>
+                                <span class="ddayid" data-ddayId="${obj.ddayId}">${obj.ddayTitle}</span>
+                            </label> -->
+                        </li>
+                        <!-- <li class="todo-repeat">
+                            <div class="container">
+                                <ul class="radio-box">
+                                    <li>
+                                        <label><input type="radio" name="todoRepeat" value="repeat1"><span></span>오늘만</label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="todoRepeat" value="repeat2"><span></span>이번주</label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="todoRepeat" value="repeat3"><span></span>매주</label>
+                                    </li>
+                                   
+                                </ul>
+                                <ul class="check-box">
+                                    <li>
+                                        <input type="checkbox" id="week1" name="check" value="mon" disabled>
+                                        <label for="week1">월</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="week2" name="check" value="tue" disabled>
+                                        <label for="week2">화</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="week3" name="check" value="wed" disabled>
+                                        <label for="week3">수</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="week4" name="check" value="thur" disabled>
+                                        <label for="week4">목</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="week5" name="check" value="fri" disabled>
+                                        <label for="week5">금</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="week6" name="check" value="sat" disabled>
+                                        <label for="week6">토</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="week7" name="check" value="sun" disabled>
+                                        <label for="week7">일</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> -->
+                        <li class="todo-star">
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="todoImportant" value="star0">
+                                        <span class="sp sp-main-todo-star-no"></span>없음
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="todoImportant" value="star1">
+                                        <span class="sp sp-main-todo-star-one"></span>낮음
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="todoImportant" value="star2">
+                                        <span class="sp sp-main-todo-star-two"></span>중간
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="todoImportant" value="star3">
+                                        <span class="sp sp-main-todo-star-three"></span>높음
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="todolist-container">
+                <!-- <div class="todolist"> -->
+                    <div class="swiper-bar"><span></span></div>
+                    <div class="total-time">
+                        <span class="sp sp-main-todolist-time"></span>
+                        <span>Total</span>
+                        <span>0시간 00분</span>
+                    </div>
+                    <ul id="todolist">
+                        <!-- todo 뿌리기 -->
+                        <!-- <li>
+                            <div class="todolist-content">
+                                <div class="todolist-left">
+                                    <span class="todoId blind">${item.todoId}</span>
+                                    <span class="todoTitle">${item.todoTitle}</span>
+                                    <span class="sp sp-main-todolist-not"><span class="blind">${item.todoState}</span></span>
+                                </div>
+                                <div class="todolist-right">
+                                    <span class="sp todolist-star ${item.todoImportant}"><span class="blind">${item.todoImportant}</span></span>
+                                    <span class="todolist-color ${obj.ddayColor}">${obj.ddayColor}</span>
+                                </div>
+                            </div>
+                            <span class="btn-bg btn-delete"><button class="sp sp-main-todolist-swipe-delete"><span class="blind">delete</span></button></span>
+                            <span class="btn-bg btn-re"><button class="sp sp-main-todolist-swipe-re"><span class="blind">edit</span></button></span>
+                            <span class="btn-done"><button class="sp sp-main-todolist-swipe-done"><span class="blind">done</span></button></span>
+                        </li> -->
+                    </ul>
+                <!-- </div> -->
+            </div>
+            <div class="popup" id="calendar">
+                <button class="cal-done">Done</button>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <button class="sp sp-common-main-c"><span class="blind">메인</span></button>
+        <button class="sp sp-common-cal" onclick="location.href='calendar.html'"><span class="blind">달력</span></button>
+        <button class="sp sp-common-chart" onclick="location.href='chart.html'"><span class="blind">차트</span></button>
+    </footer>
+</body>
+</html>

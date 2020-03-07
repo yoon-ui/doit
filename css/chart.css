@@ -1,0 +1,67 @@
+header{
+    background: #FE7C72;
+    height: 50px;
+}
+header h2{
+    color:#fff;
+}
+section{
+    padding: 50px 0 40px 0;
+}
+/* section ========================================*/
+
+.tab-nav {
+    overflow: hidden;
+}
+.tab-nav li {
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    background: #FE7C72;
+}
+.tab-nav li:last-of-type{
+    padding-right: 20px;
+}
+.tab-nav li a{
+    float: left;
+    width: 100%;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.tab-nav li a.active {
+    border-radius: 13px 13px 0 0;
+    background: #fff; 
+    color: #FE7C72;
+    font-weight: 500;
+}
+.tab-contents {
+    position: relative;
+}
+.tab-contents > div {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 160px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.chart-graph{
+    height: 360px;
+    padding: 20px;
+    position: relative;
+    top: 160px;
+}
+/* footer ========================================*/
+footer .sp-common-main{
+    position: absolute;
+    left: 40px;
+}
+footer .sp-common-chart-c{
+    position: absolute;
+    right: 40px;
+}

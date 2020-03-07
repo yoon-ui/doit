@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chart</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/chart.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Weekly</h2>
+    </header>
+    <div class="popup menu">
+        <button class="sp sp-common-menu-popup-add"><span class="blind">추가하기</span> </button>
+        <div class="container">
+            <div class="dday-box">
+                디데이를 입력해주세요
+                <div class="dday-progressbar"></div>
+                <ul>
+                    <li><button class="sp sp-common-menu-popup-delete"></button></li>
+                    <li><button class="sp sp-common-menu-popup-re"></button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="app-box">
+            <img src="../img/doit_small.svg" alt="">
+            <p>
+                <span>ver 1.0</span>
+                <span>Doit@gmail.com</span>
+            </p>
+        </div>
+    </div>
+    <div class="popup option">
+        <ul>
+            <li><a href="#"><span class="sp sp-common-option-clock"></span>최근등록순</a></li>
+            <li><a href="#"><span class="sp sp-common-option-dday"></span>디데이순</a></li>
+            <li><a href="#"><span class="sp sp-common-option-check"></span>중요도순</a></li>
+            <li><a href="#"><span class="sp sp-common-option-star"></span>다중편집</a></li>
+        </ul>
+    </div>
+    <section>
+        <ul class="tab-nav">
+            <li><a href="#today" class="active">오늘 진행도</a></li>
+            <li><a href="#weekly">이번주 진행도</a></li>
+        </ul>
+        <div class="tab-contents">
+            <div id="today" style="display: block;">메뉴1 내용입니다.</div>
+            <div id="weekly">메뉴2 내용입니다.</div>
+        </div>
+
+        <div class="chart-graph">
+          <div class="chart-date">10월21일~10월27일</div>
+        </div>
+    </section>
+    <footer>
+        <button class="sp sp-common-main"  onclick="location.href='main.html'"><span class="blind">메인</span></button>
+        <button class="sp sp-common-cal" onclick="location.href='calendar.html'"><span class="blind">달력</span></button>
+        <button class="sp sp-common-chart"><span class="blind">차트</span></button>
+    </footer>
+</body>
+</html>

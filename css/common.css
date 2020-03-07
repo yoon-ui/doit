@@ -1,0 +1,440 @@
+
+/* sprite========================================================================================= */
+.sp{display: inline-block; background-image: url(../img/sprite.png); background-repeat: no-repeat; background-size: 500px 150px; vertical-align: bottom;}
+.sp-common-menu{width: 23px; height: 23px; background-position: 0 0;}
+.sp-common-option{width: 23px; height: 23px; background-position: -23px 0;}
+.sp-common-main{width: 28px; height: 28px; background-position: -46px 0;}
+.sp-common-cal{width: 28px; height: 28px; background-position: -74px 0;}
+.sp-common-chart{width: 28px; height: 28px; background-position: -102px 0;}
+.sp-common-main-c{width: 28px; height: 28px; background-position: -130px 0;}
+.sp-common-cal-c{width: 28px; height: 28px; background-position: -158px 0;}
+.sp-common-chart-c{width: 28px; height: 28px; background-position: -186px 0;}
+.sp-common-menu-popup-add{width: 20px; height: 20px; background-position: -214px 0;}
+.sp-common-menu-popup-delete{width: 20px; height: 20px; background-position: -234px 0;}
+.sp-common-menu-popup-re{width: 20px; height: 20px; background-position: -254px 0;}
+.sp-common-menu-popup-add-date{width: 20px; height: 20px; background-position: -274px 0;}
+.sp-common-menu-popup-add-color{width: 20px; height: 20px; background-position: -480px -70px;}
+.sp-common-menu-popup-add-star{width: 20px; height: 20px; background-position: -306px 0;}
+.sp-common-menu-popup-add-star-c{width: 20px; height: 20px; background-position: -326px 0;}
+.sp-common-option-clock{width: 20px; height: 20px; background-position: -346px 0;}
+.sp-common-option-dday{width: 20px; height: 20px; background-position: -366px 0;}
+.sp-common-option-check{width: 20px; height: 20px; background-position: -386px 0;}
+.sp-common-option-star{width: 20px; height: 20px; background-position: -406px 0;}
+/* main-------------------------------------------- */
+.sp-main-todo{width: 40px; height: 40px; background-position: 0 -60px;}
+.sp-main-todo-c{width: 40px; height: 40px; background-position: -40px -30px;}
+.sp-main-memo{width: 40px; height: 40px; background-position: -80px -30px;}
+.sp-main-memo-c{width: 40px; height: 40px; background-position: -120px -30px;}
+/* .sp-main-todo-date{width: 23px; height: 23px; background-position: -160px -30px;}
+.sp-main-todo-dday{width: 23px; height: 23px; background-position: -183px -30px;}
+.sp-main-todo-repeat{width: 23px; height: 23px; background-position: -206px -30px;}
+.sp-main-todo-star{width: 23px; height: 23px; background-position: -229px -30px;}
+.sp-main-todo-date-c{width: 23px; height: 23px; background-position: -252px -30px;}
+.sp-main-todo-dday-c{width: 23px; height: 23px; background-position: -275px -30px;}
+.sp-main-todo-repeat-c{width: 23px; height: 23px; background-position: -298px -30px;}
+.sp-main-todo-star-c{width: 23px; height: 23px; background-position: -321px -30px;} */
+.sp-main-todo-add{width: 20px; height: 20px; background-position: -344px -30px;}
+.sp-main-todo-edit{width: 20px; height: 20px; background-position: -344px -30px;}
+.sp-main-todo-star-no{width: 18px; height: 18px; background-position: -46px -95px;}
+.sp-main-todo-star-one{width: 18px; height: 18px; background-position: -364px -30px;}
+.sp-main-todo-star-two{width: 36px; height: 18px; background-position: -382px -30px;}
+.sp-main-todo-star-three{width: 54px; height: 18px; background-position: -418px -30px;}
+.star0{width: 18px; height: 18px; background-position: -64px -95px;}
+.star1{width: 18px; height: 18px; background-position: -364px -70px;}
+.star2{width: 36px; height: 18px; background-position: -382px -70px;}
+.star3{width: 54px; height: 18px; background-position: -418px -70px;}
+.sp-main-todolist-time{width: 12px; height: 12px; background-position: 0 -70px;}
+.sp-main-todolist-star-one{width: 10px; height: 10px; background-position: -12px -70px;}
+.sp-main-todolist-star-two{width: 20px; height: 10px; background-position: -23px -70px;}
+.sp-main-todolist-star-three{width: 30px; height: 10px; background-position: -43px -70px;}
+.sp-main-todolist-not{width: 14px; height: 14px; background-position: -73px -70px;}
+.sp-main-todolist-ing{width: 14px; height: 14px; background-position: -87px -70px;}
+.sp-main-todolist-done{width: 14px; height: 14px; background-position: -101px -70px;}
+.sp-main-todolist-delay{width: 14px; height: 14px; background-position: -115px -70px;}
+.sp-main-todolist-swipe-delete{width: 20px; height:  20px; background-position: -129px -70px;}
+.sp-main-todolist-swipe-re{width: 20px; height: 20px; background-position: -149px -70px;}
+.sp-main-todolist-swipe-done{width: 20px; height: 20px; background-position: -169px -70px;}
+.sp-main-todolist-popup-not{width: 25px; height: 25px; background-position: -189px -70px;}
+.sp-main-todolist-popup-ing{width: 25px; height: 25px; background-position: -214px -70px;}
+.sp-main-todolist-popup-done{width: 25px; height: 25px; background-position: -239px -70px;}
+.sp-main-todolist-popup-delay{width: 25px; height: 25px; background-position: -264px -70px;}
+.sp-main-todolist-checkbox{width: 16px; height: 16px; background-position: -289px -70px;}
+.sp-main-todolist-checkbox-c{width: 16px; height: 16px; background-position: -305px -70px;}
+.sp-main-memo-memo{width: 20px; height: 20px; background-position: -321px -70px;}
+.sp-main-memo-write{width: 20px; height: 20px; background-position: -341px -70px;}
+/* caledar-------------------------------------------- */
+.sp-cal-memo{width: 20px; height: 20px; background-position: 0 -95px;}
+.sp-cal-write{width: 20px; height: 20px; background-position: -20px -95px;}
+
+
+
+/* body */
+body{
+    background: #fff;
+}
+
+
+/* popup================================================== */
+.popup{
+    position: fixed;
+    display: none;
+    background: #fff;
+    left: 50px;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    z-index: 50;
+}
+
+.popup-bg {
+    z-index: 40;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+.popup-bg-w{
+    z-index: 15;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0);
+}
+
+/* header======================================================= */
+header{
+    position: fixed;
+    width: 100%;
+    height: 50px; 
+    padding: 13px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #F7F6FB;
+}
+/* footer============================================================ */
+footer{
+    z-index: 30;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px; 
+    padding: 6px 40px;
+    background: #fff;
+    box-sizing: border-box;
+    text-align: center;
+}
+footer .sp-common-main-c{
+    position: absolute;
+    left: 40px;
+}
+footer .sp-common-chart{
+    position: absolute;
+    right: 40px;
+}
+/* calendar========================================================== */
+#calendar button {
+    float: right;
+    padding: 20px;
+    color: #FE7C72;
+    font-size: 14px;
+}
+#calendar button.done{
+    float: right;
+}
+#calendar {
+    max-width: 320px;
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}   
+.ui-datepicker {
+    margin: 10px;
+    font-size: 22px;
+}
+.ui-datepicker a {
+    text-decoration: none;
+    color: #000
+}
+.ui-datepicker table {
+    width: 100%;
+}    
+/*------------------------------------Styling the Header Section*/
+.ui-datepicker-title {
+    color: #e5eaee;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    margin-top: 10px;    
+}
+.ui-datepicker-month{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+.ui-datepicker-year{
+    display: none;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    width: 12px;
+    height: 12px;
+    text-indent: 9999px;
+    border-radius: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: -12px;
+}
+.ui-datepicker-prev {
+    float: left;
+    margin-left: 12px;
+}
+.ui-datepicker-prev:after {
+    transform: rotate(45deg);
+}
+.ui-datepicker-next {
+    float: right;
+    margin-right: 12px;
+}
+.ui-datepicker-next:after {
+    transform: rotate(-135deg);
+}
+.ui-datepicker-prev:after,
+.ui-datepicker-next:after {
+    display: none;
+}
+.ui-datepicker-calendar thead tr th span {
+    display: block;
+    color: #000;
+    width: 40px; /*추가*/
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+}
+/*---------------------------------Styling the Dates*/
+.ui-state-default {
+    display: block;
+    color: #bdc5cb;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    width: 40px;
+}
+.ui-datepicker-other-month .ui-state-default {
+    color: #eae7e7ee;
+}
+/*------------------------------------active day*/
+.ui-state-default:hover {
+    background: #eee;
+    color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 99px;
+    position: relative;
+    margin: -1px;
+}
+.ui-datepicker-calendar .ui-state-highlight {
+    color: #f26a63;
+    font-weight: bold;
+}
+.ui-datepicker-calendar .ui-state-active {
+    background: #f26a63;
+    color: #ffffff;
+    border-radius: 50%;
+}
+/* todolist================================================================================= */
+.todolist>.swiper-bar{
+    display: block;
+    width: 40px;
+    margin: auto;
+    height: 3px;
+    background: #CCCCCC;
+    border-radius: 20px;
+    text-align: center;
+}
+.todolist>.swiper-bar>span{
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: auto;
+    background: #CCCCCC;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.todolist-container .total-time{
+    line-height: 60px;
+    text-align: center;
+}
+.todolist-container  .total-time .sp-main-todolist-time{
+    vertical-align: middle;
+}
+.todolist-container  .total-time>span:nth-child(2){
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 040;
+}
+.todolist-container .total-time>span:last-of-type{
+    padding-right: 4px;
+    font-size: 14px;
+}
+
+
+
+.todolist-container #todolist{
+    overflow: auto;
+    height: 300px;
+}
+.todolist-container #todolist li{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.todolist-container #todolist li .todolist-content div{position: absolute;}
+.todolist-container #todolist li .todolist-content .todolist-left{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.todolist-container #todolist li .todolist-content .todolist-left span:nth-of-type(1){
+    /* padding-right: 100px; */
+}
+.todolist-container #todolist li .todolist-content .todolist-left .sp-main-todolist-not{
+    /* vertical-align: middle; */
+}
+.todolist-container #todolist li .todolist-content .todolist-right{
+    right: 0;
+    top: 6px;
+}
+.todolist-container #todolist li .todolist-content .todolist-right span{
+    display: block;
+}
+.todolist-container #todolist li .todolist-content .todolist-right .todolist-star{
+}
+.todolist-container #todolist li .todolist-content .todolist-right .todolist-color{
+    /* display: inline-block; */
+    width: 54px;
+    height: 7px;
+    background: #fff;
+    border-radius: 20px;
+}
+.todolist-container #todolist li .todolist-content .todolist-right .todolist-color.red{
+    background: #F06648;
+}
+.todolist-container #todolist li .todolist-content .todolist-right .todolist-color.green{
+    background: #A6D176;
+}
+.todolist-container #todolist li .todolist-content .todolist-right .todolist-color.orange{
+    background: #F7991C;
+}
+.todolist-container #todolist li .todolist-content .todolist-right .todolist-color.blue{
+    background: #75BCDF;
+}
+.todolist-container #todolist li .todolist-content .todolist-right .todolist-color.purple{
+        background: #B19CCA;
+}
+/* ------------------------------------------애니메이션 효과 */
+.todolist-container #todolist li.left .todolist-content {
+    left: -80px;
+}
+.todolist-container #todolist li.right .todolist-content{
+    left: 60px; /*수정*/
+}
+.todolist-container #todolist li .todolist-content{
+    z-index: 10;
+    position: relative;
+    left: 0;
+    background: #fff;
+    transition: left 0.5s
+}
+.todolist-container #todolist li button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+} 
+/* 리스트안의 수정, 삭제버튼 ============================================================== */
+
+/* -------------------------left 스와이프시  */
+.todolist-container #todolist li .sp-main-todolist-swipe-done{
+
+    left: 10px;
+}
+
+
+.todolist-container #todolist li.left .btn-done{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #45BA77;
+}
+
+.todolist-container #todolist li .sp-main-todolist-swipe-done{
+    right: 46px;
+}
+
+
+/*-------------------------  right 스와이프시 */
+
+
+.todolist-container #todolist li.right .sp-main-todolist-swipe-done{
+    display: none;
+}
+.todolist-container #todolist li .sp-main-todolist-swipe-delete{
+    left: 10px;
+}
+.todolist-container #todolist li .sp-main-todolist-swipe-re{
+    left: 10px;
+}
+.todolist-container #todolist li .btn-bg{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.todolist-container #todolist li.right .btn-delete{
+    background: #F9CE62;
+}
+.todolist-container #todolist li.right .btn-re{
+    left: 40px;
+    background: #44AEBC;
+}
+
+.todolist-container #todolist li .btn-done{
+    right: 0;
+    transition: right 0.5s;
+}
+
+.memo-edit textarea{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    padding: 50px 30px;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    color: #fff;
+}
+.memo-edit textarea::placeholder{
+    color:#fff;
+    font-weight: 030;
+}

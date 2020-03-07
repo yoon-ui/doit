@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todo</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/todo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>    
+    <script src="../js/jquery.touchSwipe.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/todo.js"></script>
+
+</head>
+<body>
+    <div class="menu-add">
+        <div class="head btn-group save">
+            <button class="btn-cancle">취소</button>
+            <h2>D-day</h2>
+            <button class="btn-save">저장</button>
+        </div>
+        <div class="head btn-group edit">
+            <button class="btn-cancle">취소</button>
+            <h2>D-day</h2>
+            <button class="btn-edit">수정</button>
+         </div>
+
+        <form onsubmit="return false">
+            <input type="text" id="ddayTitle" placeholder="디데이 제목을 입력하세요">
+            <div class="todo-set-list">
+                <label for="">날짜</label>
+                <div>
+                    <span id="ddayDate"></span>
+                    <button type="button" class="sp sp-common-menu-popup-add-date"><span class="blind">날짜선택하기</span></button>
+                </div>
+            </div>
+            <div class="todo-set-list">
+                <span>컬러</span>
+                <div>
+                    <label class="color-radio">
+                        <input type="radio" name="ddayColor" value="red">
+                        <span></span>
+                    </label>
+                    <label class="color-radio">
+                        <input type="radio" name="ddayColor" value="green">
+                        <span></span>
+                    </label>
+                    <label class="color-radio">
+                        <input type="radio" name="ddayColor" value="orange">
+                        <span></span>
+                    </label>
+                    <label class="color-radio">
+                        <input type="radio" name="ddayColor" value="blue">
+                        <span></span>
+                    </label>
+                    <label class="color-radio">
+                        <input type="radio" name="ddayColor" value="purple">
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+            <div class="todo-set-list">
+                <span>기본 D-day로 설정</span>
+                <label>
+                    <input type="checkbox" name="ddayDefault">
+                    <span class="sp sp-common-menu-popup-add-star"></span>
+                </label>
+            </div>
+            <div id="d-day"></div>
+        </form>
+    </div>
+    <div class="popup" id="calendar">
+        <button class="cal-done">Done</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calendar</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/calendar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>    
+    <script src="../js/jquery.touchSwipe.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/calendar.js"></script> 
+</head>
+<body>
+    <!-- section========================================================================================= -->
+    <section class="calendar">
+        <div class="cal-memo"></div>
+        <div class="cal-api">
+            <div id="calendar">
+                <div class="cal-memo-text">
+                    <span>10월 24일(월)</span>
+                    <span class="sp sp-cal-memo"><span class="blind">메모</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="todolist-container">
+            <div class="todolist">
+                <!-- <div class="swiper-bar"><span></span></div>
+                <div class="total-time">
+                    <span>0시간 00분</span>
+                </div> -->
+                <ul id="todolist">
+                    <li>
+                        <div class="todolist-content">
+                            <p>수능특강 수학 30풀기</p>
+                            <span class="sp sp-main-todolist-not"><span class="blind">미진행</span></span>
+                            <div class="todolist-importance">
+                                <span class="sp sp-main-todo-star-three-c"><span class="blind">중요도3</span></span>
+                                <span class="todolist-color"></span>
+                            </div>
+                        </div>
+                        <span class="btn-bg"><button class="sp sp-main-todolist-swipe-delete"><span class="blind">delete</span></button></span>
+                        <button class="sp sp-main-todolist-swipe-re"><span class="blind">edit</span></button>
+                        <button class="sp sp-main-todolist-swipe-done"><span class="blind">done</span></button>
+                    </li>
+                </ul>
+            </div>
+        <div>
+            
+        <!-- <article class="memo-edit"> -->
+
+        <!-- </article> -->
+        <!-- <textarea name="" id="" cols="30" rows="10" placeholder="메모를 작성해보세요"></textarea> -->
+    </section>
+    <footer>
+        <button class="sp sp-common-main"  onclick="location.href='main.html'"><span class="blind">메인</span></button>
+        <button class="sp sp-common-cal-c"><span class="blind">달력</span></button>
+        <button class="sp sp-common-chart" onclick="location.href='chart.html'"><span class="blind">차트</span></button>
+    </footer>
+    <!-- popup menu -->
+    <div class="popup menu">
+        <button class="sp sp-common-menu-popup-add"><span class="blind">추가하기</span></button>
+        <div class="container">
+            <div class="dday-box">
+                디데이를 입력해주세요
+                <div class="dday-progressbar"></div>
+                <ul>
+                    <li><button class="sp sp-common-menu-popup-delete"></button></li>
+                    <li><button class="sp sp-common-menu-popup-re"></button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="app-box">
+            <img src="../img/doit_small.svg" alt="">
+            <p>
+                <span>ver 1.0</span>
+                <span>Doit@gmail.com</span>
+            </p>
+        </div>
+    </div>
+    <div class="popup option">
+        <ul>
+            <li><a href="#"><span class="sp sp-common-option-clock"></span>최근등록순</a></li>
+            <li><a href="#"><span class="sp sp-common-option-dday"></span>디데이순</a></li>
+            <li><a href="#"><span class="sp sp-common-option-check"></span>중요도순</a></li>
+            <li><a href="#"><span class="sp sp-common-option-star"></span>다중편집</a></li>
+        </ul>
+    </div>
+</body>
+</html>

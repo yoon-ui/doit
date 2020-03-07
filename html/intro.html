@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>intro</title>
+   <link rel="stylesheet" href="../css/reset.css">
+   <link rel="stylesheet" href="../css/common.css">
+   <link rel="stylesheet" href="../css/intro.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<!-- 인트로 -->
+<body>
+   <section>
+         <div class="intro">
+            <h1><img src="../img/logo-large.svg" alt="logo"></h1>
+            <p>지금 바로 Doit!</p>
+         </div>
+         <p class="register"><a href="todo.html">D-day를 등록하세요</a></p>
+   </section> 
+   <script>
+      var ddayDefault=localStorage.getItem('ddayDefault');
+      setTimeout(function(){
+         if(ddayDefault==null){                
+               location.href='todo.html';         
+         }else{
+            location.href='main.html';
+         }
+      },2000)  
+   </script>
+</body>
+</html>   
